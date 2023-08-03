@@ -1,0 +1,21 @@
+ALGORITHM prob1
+VAR
+    TAB1 : ARRAY_OF INTEGER[4];
+    TAB2 : ARRAY_OF INTEGER[5];
+    i: INTEGER
+    j:INTEGER
+    sum=0:INTEGER
+BEGIN
+    TAB1 :={3,1,7,9};
+    TAB2 :={2,4,1,9,3};
+    FOR i FROM 0 TO TAB1.length-1 STEP 1  DO
+        FOR j FROM 0 TO TAB2.length-1 STEP 1  DO
+            IF (TAB1[i]<>TAB2[j]) THEN
+                sum=sum+TAB1[i]
+                write(sum)
+            END_IF
+        END_FOR
+    END_FOR
+
+
+END

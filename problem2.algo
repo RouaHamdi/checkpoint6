@@ -1,0 +1,25 @@
+PROCEDURE dot_product (v1, v2: ARRAY_OF FLOAT  )
+VAR
+    i: INTEGER;
+    ps=0
+BEGIN
+    FOR i FROM 0 TO length(v1)-1 STEP 1  DO
+        ps :=ps+(v1[i]*v2[i])
+    END_FOR
+END
+ALGORITHM orthogonal
+VAR
+    i,n: INTEGER
+    v: ARRAY_OF FLOAT
+BEGIN
+    Read(n)
+    FOR i FROM 0 TO n-1 STEP 1  DO
+        dot_product(v1,v2)
+        IF (ps=0) THEN
+            write(v1,v2 are orthogonal)
+        ELSE
+            write(v1,v2 are not orthogonal)
+        END_IF
+
+    END_FOR
+END
